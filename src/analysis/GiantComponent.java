@@ -4,7 +4,7 @@ import data.structure.*;
 
 import java.util.*;
 
-public final class giantComponent {
+public final class GiantComponent {
     private static Node findNode(LinkedList<Node> nodes, int n){
         for (Node node : nodes)
             if(node.getN() == n)

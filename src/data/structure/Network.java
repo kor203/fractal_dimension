@@ -11,22 +11,6 @@ public class Network {
         this.edges = edges;
     }
 
-    public void printNetwork(){
-        for (Node node : nodes) {
-            String neis = "";
-            for (Edge edge : node.edges){
-                int n;
-                if (edge.target == node)
-                    n = edge.source.n;
-                else
-                    n = edge.target.n;
-                neis += n + ", ";
-            }
-            System.out.println(node.n + ": " + neis);
-        }
-        System.out.println("Nodes: " + nodes.size() + " Edges: " + edges.size());
-    }
-
     public ArrayList<Node> getNodes() {
         return nodes;
     }
@@ -36,9 +20,12 @@ public class Network {
     public ArrayList<Edge> getEdges() {
         return edges;
     }
-    /*public Node getNode (int n){
-        for (Node node : nodes){
-            return
+
+    public void reindex(){
+        int counter = 0;
+        for (Node node : nodes) {
+            node.n = counter;
+            counter++;
         }
-    }*/
+    }
 }
